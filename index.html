@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Portfolio Website by Piotr Sierant">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <meta name="keywords" content="Portfolio, HTML, CSS, JS, Piotr, Sierant">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Piotr Sierant - Portfolio</title>
+  </head>
+  <body>
+  <header class="header">
+        <p class="logo">PS</p>
+        <nav>
+          <div class="fullPageMenu active" id="nav">
+            <div class="banner">
+              <img src="images/20210717_183454.jpg" alt="I'am here">
+            </div>
+            <div class="nav">
+              <ul>
+                <li><a href="#" data-text="Home">Home</a></li>
+                <li><a href="#" data-text="About">About</a></li>
+                <li><a href="#" data-text="Portfolio">Portfolio</a></li>
+                <li><a href="#" data-text="Contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <span class="menuIcon active" id="toggle"></span>
+        </nav>
+    </header>
+    <section class="hero">
+      <div class="container" id="hero">
+          <p>WELCOME TO</p>
+          <p id="middleText">THE WORKSPACE</p>
+          <p>OF <span>PETER!</span></p>
+          <p>FRONTEND DEVELOPER BASED IN CRACOW</p>
+      </div>
+      <a href="#"><i class="fas fa-long-arrow-down"></i></a>
+    </section>
+    <main>
+      <section class="newSection">
+      </section>
+    </main>
+    <script src="build/out.js"></script>
+    <script>
+      document.querySelector("#toggle").addEventListener("click", function () {
+        MyFunc();
+      })
+    </script>
+  </body>
+</html>
