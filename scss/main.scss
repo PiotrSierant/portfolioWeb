@@ -73,13 +73,23 @@ body {
 }
 /* logo */
 .header {
+  box-sizing: content-box;
   min-height: 100px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 99;
+  transition: .5s background-color ease-in-out;
+}
+.headerBackgroundScroll {
+   background-color: rgba(0,0,0,0.3);
+   border-bottom: 1px solid rgba(255,255,255, .3);
 }
 .logo {
-  position: fixed;
   display: inline-block;
   font-size: 30px;
   font-family: Ginger;
@@ -208,13 +218,13 @@ body {
 .hero {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: whitesmoke;
   flex-direction: column;
   flex-flow: column nowrap;
   margin-top: 2rem;
-  height: calc(100vh - 200px);
+  min-height: 50vh;
   p {
     font-family: Ginger;
     font-size: 2.5rem;
@@ -231,11 +241,7 @@ body {
 }
 .fa-long-arrow-down {
   display: none;
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
 }
-
 @media screen and (min-width: 500px){
   .fullPageMenu .nav ul li a {
     font-size: 4em;
@@ -272,14 +278,6 @@ body {
     p:nth-child(3) {
       transform: translateX(6rem);
     }
-  }
-  .fa-long-arrow-down {
-    display: unset;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: 1s pulse ease-in-out infinite;
   }
 }
 @-webkit-keyframes pulse {
@@ -353,6 +351,16 @@ body {
     font-size: 5rem;
   }
 }
+@media screen and (min-width: 1279px){
+  .fa-long-arrow-down {
+    display: unset;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: 1s pulse ease-in-out infinite;
+  }
+}
 @media screen and (min-width: 1366px){
   .fa-long-arrow-down {
     display: unset;
@@ -362,6 +370,9 @@ body {
   }
 }
 @media screen and (min-width: 1600px){
+  .hero {
+    justify-content: center;
+  }
   .hero p {
     line-height: 4.5rem;
   }

@@ -17,3 +17,13 @@ function animateHeroShake() {
     const lastTextInHero = document.querySelector('#hero p:last-child');
     lastTextInHero.classList.add('animate__animated', 'animate__flipInY');
 }
+
+window.onscroll = () => {scrollNavbar()};
+const scrollNavbar = () => {
+    const navBar = document.querySelector(".header");
+    if (document.documentElement.scrollTop > 40) {
+        navBar.classList.add("headerBackgroundScroll");
+    } else {
+        navBar.classList.remove("headerBackgroundScroll");
+    }
+}
