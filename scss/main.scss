@@ -282,12 +282,13 @@ body {
 .hero {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: var(--font-color);
   flex-direction: column;
   flex-flow: column nowrap;
   min-height: auto;
+  margin-top: 4rem;
   height: calc(100vh - 80px);
   p {
     font-family: Ginger;
@@ -309,6 +310,9 @@ body {
   }
   .hero p {
     font-size: 3rem;
+    justify-content: center;
+    margin-top: 0;
+
     &:last-of-type{
       position: relative;
       &::before {
@@ -375,6 +379,9 @@ body {
   }
 }
 @media screen and (min-width: 670px){
+  .hero {
+    margin-top: 0;
+  }
   .hero p {
     font-size: 4rem;
   }
@@ -397,6 +404,9 @@ body {
   .fullPageMenu .nav ul li a {
     font-size: 5em;
   }
+  .hero {
+    margin-top: 0;
+  }
   .hero .container {
     align-items: center;
     p:nth-child(1) {
@@ -411,10 +421,14 @@ body {
   .hero p {
     font-size: 5rem;
   }
+  .hero {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 1600px){
   .hero {
     justify-content: center;
+    margin-top: 0;
   }
   .hero p {
     line-height: 4.5rem;
@@ -424,6 +438,9 @@ body {
   .hero p {
     font-size: 5.7rem;
     line-height: 5rem;
+  }
+  .hero {
+    margin-top: 0;
   }
 }
 .toggle {

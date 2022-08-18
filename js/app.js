@@ -1,12 +1,14 @@
 import "../scss/main.scss"; /* import css style */
 
 /* Menu toggle */
-export default function menuToggle() {
+function menuToggle() {
     const nav = document.getElementById("nav");
     const toggle = document.getElementById("toggle");
     nav.classList.toggle("active");
     toggle.classList.toggle("active");
 }
+document.querySelector("#toggle").addEventListener("click", menuToggle);
+
 /* Scroll down => header style */
 window.onscroll = () => {scrollNavbar()};
 const scrollNavbar = () => {
