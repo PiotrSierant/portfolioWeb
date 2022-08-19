@@ -60,9 +60,9 @@ function toggleTheme() {
 function toggleIconTheme() {
     /* Replace icons not able to be targeted by css variables */
     if (page.classList.contains("light")) {
-        toggleIcon.src = "../images/moon.svg";
+        toggleIcon.src = "public/images/moon.svg";
     } else {
-        toggleIcon.src = "../images/sun.svg";
+        toggleIcon.src = "public/images/sun.svg";
     }
 }
 function isTrue(value) {

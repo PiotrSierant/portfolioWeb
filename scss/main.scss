@@ -47,8 +47,8 @@
   --nav-color-link: var(--pastel-text-light);
   --logo: var(--pastel-text-light);
   --font-color: var(--pastel-text-light);
-  --close: url(../images/closeLightMode.svg);
-  --open: url(../images/openLightMode.svg);
+  --close: url(../public/images/closeLightMode.svg);
+  --open: url(../public/images/openLightMode.svg);
   --last-paragraph-in-hero: 200;
   transition: background-color 1s ease-in-out;
 }
@@ -63,8 +63,8 @@
   --nav-color-link: var(--pastel-text-dark);
   --logo: var(--pastel-text-dark);
   --font-color: var(--pastel-text-dark);
-  --close: url(../images/close.svg);
-  --open: url(../images/open.svg);
+  --close: url(../public/images/close.svg);
+  --open: url(../public/images/open.svg);
   --last-paragraph-in-hero: 100;
   transition: all 1s ease-in-out;
 }
