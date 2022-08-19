@@ -71,3 +71,27 @@ function isTrue(value) {
 }
 /* Toggle theme any time the state of the checkbox changes */
 toggle.addEventListener("change", toggleTheme);
+
+const darkpink = document.querySelector('#darkpink');
+const yellow = document.querySelector('#yellow');
+const darkblue = document.querySelector('#darkblue');
+const turkus = document.querySelector('#turkus');
+
+function changeColor(event) {
+    if(event.srcElement.id === 'darkpink') {
+        document.documentElement.style.setProperty('--primary', '#C8566B');
+    }
+    if (event.srcElement.id === 'yellow') {
+        document.documentElement.style.setProperty('--primary', '#F6DA70');
+    }
+    if (event.srcElement.id === 'turkus') {
+        document.documentElement.style.setProperty('--primary', '#4CDBA6');
+    }
+    if (event.srcElement.id === 'darkblue') {
+        document.documentElement.style.setProperty('--primary', '#6661AB');
+    }
+}
+darkpink.addEventListener('click', changeColor)
+yellow.addEventListener('click', changeColor)
+darkblue.addEventListener('click', changeColor)
+turkus.addEventListener('click', changeColor)

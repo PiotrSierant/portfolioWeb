@@ -19,18 +19,17 @@
   --pastel-turkus: #4CDBA6;
   --pastel-lightnav: #F7E9DE;
 
+  --primary: var(--pastel-lightviolet);
   /* light */
-  --light-background: #F5F8F3;
-  --pastel-text-light: #111;
-  --scroll-nav-bottom-light: rgba(200, 86, 107, .7);
+  --light-background: #EEEDF0;
+  --pastel-text-light: #17181F;
   --scroll-nav-light: rgba(247, 233, 222, 0.3);
-  --webkit-scroll-light: #111;
+  --webkit-scroll-light:  #17181F;
   --webkit-scroll-light-hover: #555;
 
   /* dark */
-  --dark-background: #111;
+  --dark-background:  #17181F;
   --pastel-text-dark: #F5F8F3;
-  --scroll-nav-bottom-dark: rgba(102, 97, 171, .7);
   --scroll-nav-dark: rgba(0,0,0,0.3);
   --webkit-scroll-dark: var(--pastel-lightnav);
   --webkit-scroll-dark-hover: #a6a6a6;
@@ -42,8 +41,8 @@
   --webkit-scroll-hover: var(--webkit-scroll-light-hover);
   --background: var(--light-background);
   --scroll-nav: var(--scroll-nav-light);
-  --scroll-nav-bottom: var(--scroll-nav-bottom-light);
-  --primary-color: var(--pastel-darkpink);
+  --scroll-nav-bottom: var(--primary);
+  --primary-color: var(--primary);
   --nav-color-link: var(--pastel-text-light);
   --logo: var(--pastel-text-light);
   --font-color: var(--pastel-text-light);
@@ -58,8 +57,8 @@
   --webkit-scroll-hover: var(--webkit-scroll-dark-hover);
   --background: var(--dark-background);
   --scroll-nav: var(--scroll-nav-dark);
-  --scroll-nav-bottom:var(--scroll-nav-bottom-dark);
-  --primary-color: var(--pastel-darkblue);
+  --scroll-nav-bottom:var(--primary);
+  --primary-color: var(--primary);
   --nav-color-link: var(--pastel-text-dark);
   --logo: var(--pastel-text-dark);
   --font-color: var(--pastel-text-dark);
@@ -255,7 +254,7 @@ body {
 .menuIcon {
   position: fixed;
   top: 10px;
-  right: 20px;
+  right: 2rem;
   width: 60px;
   height: 60px;
   background: var(--close);
@@ -267,7 +266,7 @@ body {
 }
 .menuIcon.active {
   top: 10px;
-  right: 20px;
+  right: 2rem;
   width: 60px;
   height: 60px;
   background: var(--open);
@@ -303,6 +302,55 @@ body {
     font-weight: var(--last-paragraph-in-hero);
     }
   }
+}
+.change__colors {
+  position: fixed;
+  left: 2rem;
+  bottom: 1rem;
+  width: 100%;
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    list-style-type: none;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+  }
+  ul:hover {
+    width: 100%;
+  }
+  ul:hover::before {
+    position: absolute;
+    content: 'Change color';
+    left: .5rem;
+    top: -40%;
+    font-size: .6rem;
+    color: var(--font-color);
+  }
+  li {
+    float: left;
+    margin: .5rem 0 .5rem .5rem;
+    padding: .5rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: gray;
+  }
+  li:nth-child(1) {
+    background-color: var(--pastel-darkpink);
+  }
+  li:nth-child(2) {
+    background-color: var(--pastel-yellow);
+  }
+  li:nth-child(3) {
+    background-color: var(--pastel-darkblue);
+  }
+  li:nth-child(4) {
+    background-color: var(--pastel-turkus);
+  }
+
 }
 @media screen and (min-width: 500px){
   .fullPageMenu .nav ul li a {
@@ -445,9 +493,10 @@ body {
 }
 .toggle {
   position: fixed;
-  right: 40px;
-  bottom: 20px;
+  right: 2rem;
+  bottom: 1rem;
   user-select: none;
+  z-index: 999999;
 }
 .toggle-icon {
   width: 28px;
