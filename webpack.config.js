@@ -47,9 +47,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      process: "process/browser",
-    }),
+      new webpack.ProvidePlugin({
+        process: "process/browser",
+      })
   ],
   infrastructureLogging: {
     level: "warn",
