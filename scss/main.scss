@@ -511,6 +511,7 @@ body {
       &:hover {
         transition: all .5s ease-in-out;
         transform: translateX(1rem);
+        color: var(--primary)
       }
       .project__number {
         font-size: 1rem;
@@ -522,9 +523,6 @@ body {
         font-family: Ginger;
         padding: 1rem 0;
         word-break: break-word;
-        &:hover {
-          color: var(--primary)
-        }
       }
     }
   }
@@ -538,7 +536,6 @@ body {
   width: 80%;
   gap: 1rem;
   padding: 1rem 0;
-  margin-bottom: 5rem;
   margin-top: auto;
 }
 .passion_box {
@@ -549,18 +546,92 @@ body {
   width: 100%;
   padding: 1rem 0;
   color: var(--font-color);
+  border-bottom: solid 2px transparent;
+  &:after {
+    margin-top: .2rem;
+    display:block;
+    content: '';
+    border-bottom: solid 2px var(--primary);
+    transform: scaleX(0);
+    transition: transform 500ms ease-in-out;
+  }
+  &:hover:after { transform: scaleX(1); }
+  &.fromLeft:after{  transform-origin:  0% 50%; }
   img {
     max-width: 100%;
   }
   h3 {
     font-size: 1.2rem;
     color: var(--primary);
-
   }
   p {
+    border-bottom: solid 2px transparent;
     margin-top: -0.7rem;
     font-size: 1rem;
     text-align: justify;
+    border-bottom: 1px solid transparent;
+    padding-bottom: .2rem;
+  }
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  a {
+    font-family: Ginger;
+    font-size: 2rem;
+    text-transform:uppercase;
+    display:inline-block;
+    color: var(--font-color);
+    position: relative;
+    span {
+      font-family: Ginger;
+      color: var(--primary);
+    }
+    &:hover {
+      &:before {
+        content: 'Click link below!';
+        font-size: 12px;
+        font-family: Poppins;
+        width: auto;
+        padding: 0.2rem 0.6rem;
+        position: absolute;
+        border-radius: 1000px;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--primary);
+        color: var(--font-color);
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: #fff;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+    &:after {
+      display:block;
+      content: '';
+      border-bottom: solid 2px var(--primary);
+      transform: scaleX(0);
+      transition: transform 500ms ease-in-out;
+    }
+    &:hover:after { transform: scaleX(1); }
+    &.fromLeft:after{  transform-origin:  0% 50%; }
+  }
+}
+.contact__links {
+  margin-top: 1rem;
+  a {
+    font-size: .8rem;
+    color: var(--font-color);
+    padding: 1rem 0;
   }
 }
 
@@ -679,14 +750,28 @@ body {
     max-width: 400px;
     width: 45%;
     min-width: 200px;
+
     img {
       min-height: 310px;
     }
+
     h3 {
       font-size: 1rem;
     }
+
     p {
       font-size: .8rem;
+    }
+  }
+  .contact {
+    a {
+      font-size: 4rem;
+
+      &:hover {
+        &:before {
+          top: -1rem;
+        }
+      }
     }
   }
 }
