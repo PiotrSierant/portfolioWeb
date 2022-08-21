@@ -385,7 +385,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  padding-top: 5rem;
   .container {
     display: flex;
     align-items: center;
@@ -507,6 +507,7 @@ body {
       gap: 1rem;
       color: var(--font-color);
       transition: all .5s ease-in-out;
+      padding: .4rem 0;
       &:hover {
         transition: all .5s ease-in-out;
         transform: translateX(1rem);
@@ -529,9 +530,45 @@ body {
   }
 }
 
+.passion_container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin-bottom: 5rem;
+  margin-top: auto;
+}
+.passion_box {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 0;
+  color: var(--font-color);
+  img {
+    max-width: 100%;
+  }
+  h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+
+  }
+  p {
+    margin-top: -0.7rem;
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
 
 /* Media start */
 @media screen and (min-width: 500px){
+  .passion_container {
+    flex-direction: row;
+  }
   .fullPageMenu .nav ul li a {
     font-size: 4em;
   }
@@ -633,6 +670,26 @@ body {
     font-size: 3rem;
   }
 }
+@media screen and (min-width: 730px) {
+  .passion_container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .passion_box {
+    max-width: 400px;
+    width: 45%;
+    min-width: 200px;
+    img {
+      min-height: 310px;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: .8rem;
+    }
+  }
+}
 @media(max-width:991px) {
   .banner {
     display: none;
@@ -652,6 +709,20 @@ body {
     }
     p:nth-child(3) {
       transform: translateX(10rem);
+    }
+  }
+  .passion_box {
+    max-width: 400px;
+    width: 30%;
+    min-width: 200px;
+    img {
+      min-height: 310px;
+    }
+    h3 {
+      font-size: .9rem;
+    }
+    p {
+      font-size: .7rem;
     }
   }
 }
@@ -676,6 +747,20 @@ body {
     .about__desc {
       text-align: center;
       padding: 0 1rem;
+    }
+  }
+  .passion_box {
+    max-width: 400px;
+    width: 30%;
+    min-width: 200px;
+    img {
+      min-height: 310px;
+    }
+    h3 {
+      font-size: .8rem;
+    }
+    p {
+      font-size: .6rem;
     }
   }
 }

@@ -21,7 +21,7 @@
             </div>
             <div class="nav">
               <ul>
-                <li><a href="#hero" data-text="Home">Home</a></li>
+                <li><a href="#home" data-text="Home">Home</a></li>
                 <li><a href="#about" data-text="About">About</a></li>
                 <li><a href="#portfolio" data-text="Portfolio">Portfolio</a></li>
                 <li><a href="#" data-text="Contact">Contact</a></li>
@@ -31,7 +31,7 @@
           <span class="menuIcon active" id="toggle"></span>
         </nav>
     </header>
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="container" id="hero">
           <p>WELCOME TO</p>
           <p>THE WORKSPACE</p>
@@ -54,8 +54,8 @@
     </ul>
   </div>
     <main>
-      <section class="section">
-        <div class="container" id="about">
+      <section class="section" id="about">
+        <div class="container">
           <h2>What I do?</h2>
           <div class="line"></div>
           <p class="about__desc">
@@ -99,9 +99,9 @@
           </div>
         </div>
       </section>
-      <section class="section">
-        <div class="container" id="portfolio">
-          <h2>Projects</h2>
+      <section class="section" id="portfolio">
+        <div class="container">
+          <h2 id="tool">Projects</h2>
           <div class="line"></div>
           <section class="project">
             <div class="project__number">01</div>
@@ -134,11 +134,52 @@
                target="_blank"
             >Other projects</a>
           </section>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h2>My passion</h2>
           <div class="line"></div>
-
+          <div class="passion_container">
+            <article class="passion_box">
+              <img src="public/images/programowanie.svg" />
+              <h3>Programming</h3>
+              <p>Develops creativity, teaches organization, and enforces precision in thinking and behavior.</p>
+            </article>
+            <article class="passion_box">
+              <img src="public/images/podróżowanie.svg" />
+              <h3>Traveling</h3>
+              <p>It gives you rest and catching a breath, but also broadens your horizons and allows you to improve some of your skills.</p>
+            </article>
+            <article class="passion_box">
+              <img src="public/images/ksiazki.svg" />
+              <h3>Reading books</h3>
+              <p>Develops imagination, improves focus and concentration. It is also an ideal form of relaxation.</p>
+            </article>
+            <article class="passion_box">
+              <img src="public/images/sport.svg" />
+              <h3>Sport</h3>
+              <p>The perfect form of entertainment and a break from everyday life.</p>
+            </article>
+            <article class="passion_box">
+              <img src="public/images/wycieczki%20rowerow.svg" />
+              <h3>Bicycle tours</h3>
+              <p>Great adventure, amazing views and unique experiences.</p>
+            </article>
+            <article class="passion_box">
+              <img src="public/images/góry.svg" />
+              <h3>Hiking</h3>
+              <p>One of the favorite forms of spending free time. Perfectly relaxes.</p>
+            </article>
+            <article class="passion_box">
+              <img src="public/images/jedzenie.svg" />
+              <h3>Food</h3>
+              <p>Especially burgers and grilled food.</p>
+            </article>
+          </div>
         </div>
       </section>
     </main>
-    <script src="build/out.js"></script>
+    <script defer src="build/out.js"></script>
   </body>
 </html>
