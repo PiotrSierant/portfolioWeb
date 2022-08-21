@@ -507,7 +507,6 @@ body {
       gap: 1rem;
       color: var(--font-color);
       transition: all .5s ease-in-out;
-
       &:hover {
         transition: all .5s ease-in-out;
         transform: translateX(1rem);
@@ -517,12 +516,14 @@ body {
         align-self: flex-start;
         font-family: Ginger;
       }
-
       .project__name {
         font-size: 2rem;
         font-family: Ginger;
         padding: 1rem 0;
         word-break: break-word;
+        &:hover {
+          color: var(--primary)
+        }
       }
     }
   }

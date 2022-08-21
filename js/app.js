@@ -7,6 +7,11 @@ function menuToggle() {
     nav.classList.toggle("active");
     toggle.classList.toggle("active");
 }
+
+const nav = document.querySelector('nav')
+const li = nav.querySelectorAll('li');
+li.forEach((element) => {
+    element.addEventListener('click', menuToggle)})
 document.querySelector("#toggle").addEventListener("click", menuToggle);
 
 /* Scroll down => header style */
