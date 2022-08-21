@@ -1,5 +1,5 @@
 import "../scss/main.scss"; /* import css style */
-
+import party from "party-js";
 /* Menu toggle */
 function menuToggle() {
     const nav = document.getElementById("nav");
@@ -39,6 +39,7 @@ function animateHeroShake() {
 const page = document.querySelector(".page");
 const toggle = page.querySelector(".toggle-input");
 const toggleIcon = page.querySelector(".toggle-icon");
+const logo = document.querySelector('.logo')
 /* set theme and localStorage on page load */
 setCheckedState();
 function setCheckedState() {
@@ -85,19 +86,23 @@ const turkus = document.querySelector('#turkus');
 function changeColor(event) {
     if(event.srcElement.id === 'darkpink') {
         document.documentElement.style.setProperty('--primary', '#C8566B');
+        logo.src = "public/images/logo_darkpink.svg";
     }
     if (event.srcElement.id === 'yellow') {
         document.documentElement.style.setProperty('--primary', '#F6DA70');
+        logo.src = "public/images/logo_yellow.svg";
     }
     if (event.srcElement.id === 'turkus') {
         document.documentElement.style.setProperty('--primary', '#4CDBA6');
+        logo.src = "public/images/logo_turkus.svg";
     }
     if (event.srcElement.id === 'darkblue') {
         document.documentElement.style.setProperty('--primary', '#6661AB');
+        logo.src = "public/images/logo_darkblue.svg";
     }
+    party.confetti(this);
 }
 darkpink.addEventListener('click', changeColor)
 yellow.addEventListener('click', changeColor)
 darkblue.addEventListener('click', changeColor)
 turkus.addEventListener('click', changeColor)
-

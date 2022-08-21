@@ -152,12 +152,8 @@ body {
    border-bottom: 1px solid var(--scroll-nav-bottom);
 }
 .logo {
-  display: inline-block;
-  font-size: 30px;
-  font-family: Ginger, serif;
   margin-left: 2rem;
-  color: var(--primary);
-  transition: .5s color ease-in-out;
+  width: 50px;
 }
 /* Menu */
 .fullPageMenu {
