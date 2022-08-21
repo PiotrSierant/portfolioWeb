@@ -1,5 +1,13 @@
 import "../scss/main.scss"; /* import css style */
 import party from "party-js";
+
+const page = document.querySelector(".page");
+const toggle = page.querySelector(".toggle-input");
+const toggleIcon = page.querySelector(".toggle-icon");
+toggleIcon.src = "public/images/sun.svg";
+const logo = document.querySelector('.logo');
+logo.src = "public/images/logo.svg";
+
 /* Menu toggle */
 function menuToggle() {
     const nav = document.getElementById("nav");
@@ -36,9 +44,7 @@ function animateHeroShake() {
     lastTextInHero.classList.add('animate__animated', 'animate__flipInY');
 }
 
-const page = document.querySelector(".page");
-const toggle = page.querySelector(".toggle-input");
-const toggleIcon = page.querySelector(".toggle-icon");
+
 /* set theme and localStorage on page load */
 setCheckedState();
 function setCheckedState() {
@@ -83,7 +89,6 @@ const darkblue = document.querySelector('#darkblue');
 const turkus = document.querySelector('#turkus');
 
 function changeColor(event) {
-    const logo = document.querySelector('.logo')
     if(event.srcElement.id === 'darkpink') {
         document.documentElement.style.setProperty('--primary', '#C8566B');
         logo.src = "public/images/logo_darkpink.svg";
