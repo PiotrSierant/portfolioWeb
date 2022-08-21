@@ -154,7 +154,7 @@ body {
 .logo {
   display: inline-block;
   font-size: 30px;
-  font-family: Ginger;
+  font-family: Ginger, serif;
   margin-left: 2rem;
   color: var(--primary);
   transition: .5s color ease-in-out;
@@ -286,10 +286,10 @@ body {
   margin-top: 4rem;
   height: auto;
   p {
-    font-family: Ginger;
+    font-family: Ginger, serif;
     font-size: 2.5rem;
     span {
-      font-family: Ginger;
+      font-family: Ginger, serif;
       color: var(--primary-color);
     }
   &:last-of-type {
@@ -411,7 +411,7 @@ body {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     span {
-      font-family: Ginger;
+      font-family: Ginger, serif;
       color: var(--primary);
     }
   }
@@ -462,7 +462,7 @@ body {
       display: flex;
       animation: scrollTextToRight 33s infinite linear;
       h2 {
-        font-family: Ginger;
+        font-family: Ginger, serif;
         font-weight: 200;
       }
     }
@@ -520,11 +520,11 @@ body {
       .project__number {
         font-size: 1rem;
         align-self: flex-start;
-        font-family: Ginger;
+        font-family: Ginger, serif;
       }
       .project__name {
         font-size: 2rem;
-        font-family: Ginger;
+        font-family: Ginger, serif;
         padding: 1rem 0;
         word-break: break-word;
       }
@@ -559,7 +559,7 @@ body {
     transition: transform 500ms ease-in-out;
   }
   &:hover:after { transform: scaleX(1); }
-  &.fromLeft:after{  transform-origin:  0% 50%; }
+  &.fromLeft:after{  transform-origin:  0 50%; }
   img {
     max-width: 100%;
   }
@@ -583,21 +583,21 @@ body {
   height: 60vh;
   width: 100%;
   a {
-    font-family: Ginger;
+    font-family: Ginger, serif;
     font-size: 2rem;
     text-transform:uppercase;
     display:inline-block;
     color: var(--font-color);
     position: relative;
     span {
-      font-family: Ginger;
+      font-family: Ginger, serif;
       color: var(--primary);
     }
     &:hover {
       &:before {
         content: 'Click link below!';
         font-size: 12px;
-        font-family: Poppins;
+        font-family: 'Poppins', sans-serif;
         width: auto;
         padding: 0.2rem 0.6rem;
         position: absolute;
@@ -626,7 +626,7 @@ body {
       transition: transform 500ms ease-in-out;
     }
     &:hover:after { transform: scaleX(1); }
-    &.fromLeft:after{  transform-origin:  0% 50%; }
+    &.fromLeft:after{  transform-origin:  0 50%; }
   }
 }
 .footer {
@@ -897,5 +897,27 @@ body {
   }
   .hero {
     margin-top: 0;
+  }
+}
+
+.profile__photo {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 80%;
+    border-radius: 50% 30% 40% 40% / 30% 40% 30% 30%;
+    &:hover {
+      box-shadow: 0 0 5px var(--primary),
+      0 0 10px var(--primary),
+      0 0 25px var(--primary),;
+    }
+  }
+}
+
+@media screen and (min-width: 413px) {
+  .profile__photo {
+    display: none;
   }
 }
