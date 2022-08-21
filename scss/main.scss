@@ -69,6 +69,7 @@
 html {
   font-size: 16px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 @media screen and (min-width: 320px) {
   html {
@@ -498,6 +499,9 @@ body {
   from   { transform: translateX(-50%); }
   to { transform: translateX(0); }
 }
+.ma {
+  margin-bottom: 2rem;
+}
 .section {
   .container {
     .project {
@@ -527,7 +531,6 @@ body {
     }
   }
 }
-
 .passion_container {
   display: flex;
   align-items: flex-start;
@@ -577,7 +580,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   a {
     font-family: Ginger;
@@ -626,12 +629,27 @@ body {
     &.fromLeft:after{  transform-origin:  0% 50%; }
   }
 }
+.footer {
+  padding-bottom: 2rem;
+}
 .contact__links {
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   a {
-    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .6rem;
     color: var(--font-color);
     padding: 1rem 0;
+    letter-spacing: .2rem ;
+    transition: all .3s ease-in-out;
+    &:hover {
+      color: var(--primary);
+      transition: all .2s ease-in-out;
+    }
   }
 }
 
@@ -678,6 +696,10 @@ body {
     p:nth-child(3) {
       transform: translateX(6rem);
     }
+  }
+  .contact__links {
+    flex-direction: row;
+    gap: 1rem;
   }
 }
 @-webkit-keyframes pulse {
@@ -772,6 +794,11 @@ body {
           top: -1rem;
         }
       }
+    }
+  }
+  .contact__links {
+    a {
+      font-size: 0.8rem;
     }
   }
 }
