@@ -39,7 +39,6 @@ function animateHeroShake() {
 const page = document.querySelector(".page");
 const toggle = page.querySelector(".toggle-input");
 const toggleIcon = page.querySelector(".toggle-icon");
-const logo = document.querySelector('.logo')
 /* set theme and localStorage on page load */
 setCheckedState();
 function setCheckedState() {
@@ -84,6 +83,7 @@ const darkblue = document.querySelector('#darkblue');
 const turkus = document.querySelector('#turkus');
 
 function changeColor(event) {
+    const logo = document.querySelector('.logo')
     if(event.srcElement.id === 'darkpink') {
         document.documentElement.style.setProperty('--primary', '#C8566B');
         logo.src = "public/images/logo_darkpink.svg";
