@@ -592,7 +592,7 @@ body {
     &:hover {
       &:before {
         content: 'Click link below!';
-        font-size: 12px;
+        font-size: 10px;
         font-family: 'Poppins', sans-serif;
         width: auto;
         padding: 0.2rem 0.6rem;
@@ -603,15 +603,6 @@ body {
         transform: translateX(-50%);
         background-color: var(--primary);
         color: var(--font-color);
-        &:after {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          background-color: #fff;
-          width: 10px;
-          height: 10px;
-        }
       }
     }
     &:after {
